@@ -20,7 +20,7 @@ func createRandomAccount(t *testing.T) Account {
 	account, err := testQueries.CreateAccount(context.Background(), arg)
 	// This makes sure the error must be nil, and auto fails the test if it's not
 	require.NoError(t, err)
-	// Makes sure the testQueries object is not empty
+	// Makes sure the testQueries account object is not empty
 	require.NotEmpty(t, account)
 
 	// This confirms that the Owner, Balance, and Currency values match with input arguments
